@@ -129,3 +129,16 @@ body {
     background-image: url(images/foto\ viagem\ 1.jpg);
     border-radius: 64px 0 0 64px;
 }
+
+
+/* Estilo da tela de registro */
+
+.img-criar-conta {
+    background-image: url(images/foto\ viagem\ 2.jpg);
+    border-radius: 0 64px 64px 0;
+}
+
+.nome-sobrenome {
+    display: flex;
+    gap: 8px;
+}
