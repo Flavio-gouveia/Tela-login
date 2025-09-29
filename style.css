@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif
+}
+
+:root {
+    --corAzul: #00BDFF;
+    --corCinza: #ececec;
+}
+
+.interface {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tela-login {
+    width: 70%;
+    text-align: center;
+}
+
+.tela-login h1 {
+    font-size: 3.5rem;
+}
+
+.tela-login h1 span {
+    color: var(--corAzul);
+}
+
+.tela-login form {
+    width: 40%;
+    margin: 64px auto;
+}
+
+.tela-login form input {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 8px;
+    outline: none;
+    border: none;
+    background-color: var(--corCinza);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+}
