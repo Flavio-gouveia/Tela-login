@@ -8,6 +8,14 @@
 :root {
     --corAzul: #00BDFF;
     --corCinza: #ececec;
+    --corBranca: #ffffff;
+    --corAzulEscuro: #0099cc;
+    --corPreta: #000020;
+    --corBrancoOpaco: #f8f8f8;
+}
+
+body {
+    background-image: linear-gradient(45deg, #d6fffc, #f6f6f6 60%);
 }
 
 .interface {
@@ -47,4 +55,77 @@
     border-radius: 8px;
     font-size: 1rem;
     font-weight: 600;
+}
+
+.tela-login form > a {
+
+    font-size: .8rem;
+    display: block;
+    text-align: right;
+    color: var(--corAzul);
+
+}
+
+.tela-login form input[type="submit"] {
+    margin-top: 24px;
+    background-color: var(--corAzul);
+    color: var(--corBranca);
+    border-radius: 32px;
+    cursor: pointer;
+
+}
+
+.tela-login form input[type="submit"]:hover {
+    background-color: var(--corAzulEscuro);
+    transition: .3s;
+}
+
+.tela-login .opt-login p {
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.opt-login .btn-opt-login button {
+    width: 56px;
+    height: 56px;
+    border: none;
+    background-color: var(--corBranca);
+    box-shadow: 4px 4px 10px var(--corPreta);
+    margin: 0 4px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color .2s;
+}
+
+.btn-opt-login button img {
+    width: 50%;
+}
+
+.opt-login .btn-opt-login button:hover {
+    background-color:var(--corBrancoOpaco) ;
+}
+
+.txt-criar-conta-login {
+    margin-top: 56px;
+}
+
+.txt-criar-conta-login p {
+    font-weight: 600;
+}
+
+.txt-criar-conta-login p a {
+    color: var(--corAzul);
+}
+
+.img-decoracao {
+    width: 30%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.img-login {
+    background-image: url(images/foto\ viagem\ 1.jpg);
+    border-radius: 64px 0 0 64px;
 }
