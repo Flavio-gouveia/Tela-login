@@ -2,16 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Plus Jakarta Sans", sans-serif
+    font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 :root {
     --corAzul: #00BDFF;
-    --corCinza: #ececec;
+    --CorCinza: #ececec;
     --corBranca: #ffffff;
-    --corAzulEscuro: #0099cc;
-    --corPreta: #000020;
-    --corBrancoOpaco: #f8f8f8;
+    --corAzulEscuro: #02a1db;
 }
 
 body {
@@ -19,7 +17,7 @@ body {
 }
 
 .interface {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 
     display: flex;
@@ -45,71 +43,67 @@ body {
     margin: 64px auto;
 }
 
-.tela-login form input {
+.tela-login form input{
     width: 100%;
     padding: 16px;
     margin-bottom: 8px;
     outline: none;
     border: none;
-    background-color: var(--corCinza);
+    background-color:var(--CorCinza);
     border-radius: 8px;
     font-size: 1rem;
     font-weight: 600;
 }
 
 .tela-login form > a {
-
-    font-size: .8rem;
-    display: block;
+    font-size: 0.8rem;
     text-align: right;
+    display: block;
     color: var(--corAzul);
-
 }
 
 .tela-login form input[type="submit"] {
     margin-top: 24px;
     background-color: var(--corAzul);
-    color: var(--corBranca);
+    color:var(--corBranca);
     border-radius: 32px;
     cursor: pointer;
-
+    transition: background-color .2s;
 }
 
 .tela-login form input[type="submit"]:hover {
-    background-color: var(--corAzulEscuro);
-    transition: .3s;
+    background-color:var(--corAzulEscuro) ;
 }
 
 .tela-login .opt-login p {
     font-weight: 600;
     margin-bottom: 16px;
 }
-
-.opt-login .btn-opt-login button {
+.opt-login .btn-opt-login button{
     width: 56px;
     height: 56px;
     border: none;
-    background-color: var(--corBranca);
-    box-shadow: 4px 4px 10px var(--corPreta);
-    margin: 0 4px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color .2s;
+     background-color: var(--corBranca);
+     box-shadow: 4px 4px 10px #000020;
+     margin: 0 4px;
+     cursor: pointer;
+     border-radius: 8px;
+     transition:background-color .2s ;
+}
+
+.opt-login .btn-opt-login button:hover{
+    background-color: #f8f8f8;
 }
 
 .btn-opt-login button img {
     width: 50%;
 }
 
-.opt-login .btn-opt-login button:hover {
-    background-color:var(--corBrancoOpaco) ;
-}
-
 .txt-criar-conta-login {
-    margin-top: 56px;
+    margin-top:56px ;
 }
 
-.txt-criar-conta-login p {
+.txt-criar-conta-login p{
     font-weight: 600;
 }
 
@@ -130,15 +124,52 @@ body {
     border-radius: 64px 0 0 64px;
 }
 
-
-/* Estilo da tela de registro */
+/* Estilo da tela de criar conta */
 
 .img-criar-conta {
     background-image: url(images/foto\ viagem\ 2.jpg);
-    border-radius: 0 64px 64px 0;
+    border-radius: 0px 65px 64px 0px;
 }
 
-.nome-sobrenome {
+.nome-sobrenome{
     display: flex;
     gap: 8px;
+}
+
+/* Efeitos de transição */
+
+
+#login, #criar-conta {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+#criar-conta {
+    pointer-events: none;
+}
+
+#criar-conta .tela-login {
+    transform: translateX(15rem);
+    opacity: 0;
+}
+
+#criar-conta .img-criar-conta {
+    transform: translateX(-15rem);
+    opacity: 0; 
+}
+
+/* ------------------- */
+
+.ativo #login .tela-login {
+    transform: translateX(-15rem);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.ativo #login .img-login {
+    transform: translateX(15rem);
+    opacity: 0;
+    pointer-events: none;
 }
